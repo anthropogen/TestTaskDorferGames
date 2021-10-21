@@ -175,7 +175,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656399267882796980}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -9}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1656399269056972738}
@@ -211,7 +211,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1656399267916806177}
-  - component: {fileID: 1656399267916806174}
+  - component: {fileID: 417380577815142960}
   m_Layer: 0
   m_Name: ObstacleChunk1
   m_TagString: Untagged
@@ -237,7 +237,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1656399267916806174
+--- !u!114 &417380577815142960
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1656399267916806175}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bc9c29015d6bf34b8a0fe4c2b531a13, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d69ed47bbf071b4a991c261fbd179d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rows:
@@ -254,7 +254,6 @@ MonoBehaviour:
   - {fileID: 1656399268602267608}
   - {fileID: 1656399268355728739}
   - {fileID: 1656399268699886752}
-  - {fileID: 0}
 --- !u!1 &1656399268232777858
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +369,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656399268355728736}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1656399268551003061}
@@ -504,7 +503,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656399268699886753}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1656399268251047258}

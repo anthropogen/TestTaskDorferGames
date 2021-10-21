@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FoodChunk : MonoBehaviour
+public class FoodChunk : Chunk
 {
     [SerializeField] private FoodGroup[] groups;
     [SerializeField] private ColorCheckPoint checkPoint;
-    [SerializeField] private ColorInstaller colorInstaller;
-    private void Start()
-    {
-        Spawn();
-    }
-    public void Spawn()
+
+    public override Transform Start => checkPoint.transform;
+
+    public override Transform End => groups[groups.Length-1].transform;
+
+    public void Spawn(ColorInstaller colorInstaller)
     {
         Color[] colors = new Color[] {colorInstaller.GetColor(), colorInstaller.GetColor() };
         checkPoint.Paint(colors[0]);

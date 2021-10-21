@@ -50,8 +50,7 @@ public class Jaws : MonoBehaviour
     {
         _eatenCrystalInRow++;
         _eatenCrystal++;
-        Debug.Log("Crystal");
-        if (_eatenCrystalInRow>needCrystalToFever)
+        if (_eatenCrystalInRow>=needCrystalToFever)
         {
             Debug.Log("Fever");
         }

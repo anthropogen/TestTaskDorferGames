@@ -78,13 +78,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8835e21b9e4f22489ab5c302f8e2d8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodTemplate: {fileID: 2967885258062656511, guid: 9499615cf329b7647841738dc69293f2, type: 3}
   spawnPoints:
   - {fileID: 2624578222871779809}
   - {fileID: 2624578222427208332}
   - {fileID: 2624578222617399619}
   - {fileID: 2624578221618699806}
   - {fileID: 2624578221831895450}
+  foodTemplate: {fileID: 2967885258062656511, guid: 9499615cf329b7647841738dc69293f2, type: 3}
   minFoodAmount: 2
 --- !u!1 &2624578221160986491
 GameObject:
@@ -284,13 +284,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8835e21b9e4f22489ab5c302f8e2d8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodTemplate: {fileID: 2967885258062656511, guid: 9499615cf329b7647841738dc69293f2, type: 3}
   spawnPoints:
   - {fileID: 2624578221160986490}
   - {fileID: 2624578221258424633}
   - {fileID: 2624578222985761832}
   - {fileID: 2624578222395653663}
   - {fileID: 2624578222270859166}
+  foodTemplate: {fileID: 2967885258062656511, guid: 9499615cf329b7647841738dc69293f2, type: 3}
   minFoodAmount: 2
 --- !u!1 &2624578221495924359
 GameObject:
@@ -340,13 +340,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8835e21b9e4f22489ab5c302f8e2d8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodTemplate: {fileID: 2967885258062656511, guid: 9499615cf329b7647841738dc69293f2, type: 3}
   spawnPoints:
   - {fileID: 2624578221288720557}
   - {fileID: 2624578221774994028}
   - {fileID: 2624578222049166335}
   - {fileID: 2624578222775510803}
   - {fileID: 2624578221944187690}
+  foodTemplate: {fileID: 2967885258062656511, guid: 9499615cf329b7647841738dc69293f2, type: 3}
   minFoodAmount: 2
 --- !u!1 &2624578221618699807
 GameObject:
@@ -553,7 +553,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2624578221997207915}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 29.6}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2624578221481268855}
@@ -586,7 +586,6 @@ MonoBehaviour:
   - {fileID: 2624578222597684367}
   - {fileID: 997006280310857233}
   checkPoint: {fileID: 2624578221393438995}
-  colorInstaller: {fileID: 0}
 --- !u!1 &2624578222049166332
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,13 +754,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8835e21b9e4f22489ab5c302f8e2d8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodTemplate: {fileID: 2967885258062656511, guid: 9499615cf329b7647841738dc69293f2, type: 3}
   spawnPoints:
   - {fileID: 2624578222333821943}
   - {fileID: 2624578221393747891}
   - {fileID: 2624578222394252906}
   - {fileID: 2624578221680613279}
   - {fileID: 2624578222139707582}
+  foodTemplate: {fileID: 2967885258062656511, guid: 9499615cf329b7647841738dc69293f2, type: 3}
   minFoodAmount: 2
 --- !u!1 &2624578222384798691
 GameObject:
@@ -991,13 +990,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8835e21b9e4f22489ab5c302f8e2d8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodTemplate: {fileID: 2967885258062656511, guid: 9499615cf329b7647841738dc69293f2, type: 3}
   spawnPoints:
   - {fileID: 2624578221238350840}
   - {fileID: 2624578221761654337}
   - {fileID: 2624578222411890086}
   - {fileID: 2624578222384798690}
   - {fileID: 2624578222579984138}
+  foodTemplate: {fileID: 2967885258062656511, guid: 9499615cf329b7647841738dc69293f2, type: 3}
   minFoodAmount: 2
 --- !u!1 &2624578222617399616
 GameObject:
@@ -1257,13 +1256,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8835e21b9e4f22489ab5c302f8e2d8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodTemplate: {fileID: 2967885258062656511, guid: 9499615cf329b7647841738dc69293f2, type: 3}
   spawnPoints:
   - {fileID: 1694706786516911000}
   - {fileID: 716134934398714992}
   - {fileID: 6785660343211315560}
   - {fileID: 8793848449488070930}
   - {fileID: 8832904248660449372}
+  foodTemplate: {fileID: 2967885258062656511, guid: 9499615cf329b7647841738dc69293f2, type: 3}
   minFoodAmount: 2
 --- !u!1 &8987310722402745554
 GameObject:
