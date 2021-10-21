@@ -1,34 +1,48 @@
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class Sneak : MonoBehaviour
 {
     [SerializeField] private TailGenerator generator;
-    [SerializeField] private SneakHead head;
-    [SerializeField] private SneakInput input;
-    [SerializeField] private float speed;
-    [SerializeField] private float springiness;
-    [SerializeField] private Vector2 rangeMoveZoneOnX;
+    [SerializeField] private NormarMovement normarMovement;
+    [SerializeField] private FeverMovement feverMovement;
+    [SerializeField] private Movement currentMovement;
+    [SerializeField] private Jaws jaws;
+    private bool _isFever;
     private List<Segment> _tail;
+    public bool IsFever => _isFever;
+    public event UnityAction FeverEnded;
     private void Awake()
     {
         _tail = generator.Generate();
+        currentMovement = normarMovement;
+        _isFever = false;
+    }
+    private void OnEnable()
+    {
+        jaws.Fever += OnFever;
+    }
+    private void OnDisable()
+    {
+        jaws.Fever -= OnFever;
     }
 
     private void FixedUpdate()
     {
-        Move(head.transform.position +input.GetDiretion(head.transform.position)*speed*Time.fixedDeltaTime);
+        currentMovement.Move(_tail);
     }
-    private void Move(Vector3 nextPosition)
+    public void OnFever()
     {
-        nextPosition.x = Mathf.Clamp(nextPosition.x, rangeMoveZoneOnX.x, rangeMoveZoneOnX.y);
-        Vector3 prevPosition = head.transform.position;
-        foreach (var segment in _tail)
-        {
-            Vector3 tempPosition = segment.transform.position;
-            segment.Move(prevPosition, springiness);
-            prevPosition = tempPosition;
-        }
-        head.Move(nextPosition);
+        StartCoroutine(Fever());
+    }
+   private IEnumerator Fever()
+    {
+        currentMovement = feverMovement;
+        _isFever = true;
+        yield return new WaitForSeconds(5f);
+        _isFever = false;
+        currentMovement = normarMovement;
+        FeverEnded?.Invoke();
     }
 }

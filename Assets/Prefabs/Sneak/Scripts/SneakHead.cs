@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.Events; 
 [RequireComponent(typeof(Rigidbody))]
 public class SneakHead : Colored
 {
     [SerializeField] private Sneak sneak;
     private Rigidbody _rigidbody;
+    public event UnityAction Died;
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -18,8 +20,13 @@ public class SneakHead : Colored
         {
             if (obstacle != null)
             {
-                Debug.Log("falled");
-                sneak.gameObject.SetActive(false);
+                if (!sneak.IsFever)
+                {
+                    sneak.gameObject.SetActive(false);
+                    Died?.Invoke();
+                    return;
+                }
+                obstacle.gameObject.SetActive(false);
             }
         }
     }

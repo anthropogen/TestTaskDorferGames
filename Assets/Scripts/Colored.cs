@@ -15,5 +15,4 @@ public abstract class Colored : MonoBehaviour
     {
       _currentColor= _renderer.material.color = newColor;
     }
-
 }

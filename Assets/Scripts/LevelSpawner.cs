@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class LevelSpawner : MonoBehaviour
 {
+    [SerializeField] private Game game;
     [SerializeField] private ColorInstaller colorInstaller;
     [SerializeField] private ObstacleChunk[] obstacleTemplates;
     [SerializeField] private FoodChunk[] foodsTemplates;
     [SerializeField] private Chunk firstChunk;
+    [SerializeField] private FinishChunk finishChunk;
     [SerializeField] private int levelSize;
     [SerializeField] private float offsetSpawnZ;
     private List<Chunk> _chunks;
-    private void Start()
+    private void OnEnable()
     {
-        Spawn();
+        game.StartedGame += Spawn;
+    }
+    private void OnDisable()
+    {
+        game.StartedGame -= Spawn;
     }
     private void Spawn()
     {
@@ -24,19 +30,24 @@ public class LevelSpawner : MonoBehaviour
         SpawnFoodChunk();
         SpawnObstacleChunk();
         }
+      var finish= (FinishChunk) InstantiateChunk(finishChunk);
+        finish.LevelEnded += game.Win;
     }
     private void SpawnObstacleChunk()
     {
-        var chunk = Instantiate(obstacleTemplates[Random.Range(0, obstacleTemplates.Length)]);
-        chunk.transform.position = new Vector3(0, 0, _chunks[_chunks.Count - 1].End.position.z - chunk.Start.localPosition.z+offsetSpawnZ);
+        var chunk =(ObstacleChunk) InstantiateChunk(obstacleTemplates[Random.Range(0, obstacleTemplates.Length)]);
         chunk.Spawn();
-        _chunks.Add(chunk);
     }
     private void SpawnFoodChunk()
     {
-        var chunk = Instantiate(foodsTemplates[Random.Range(0, foodsTemplates.Length)]);
-        chunk.transform.position = new Vector3(0,0, _chunks[_chunks.Count - 1].End.position.z - chunk.Start.localPosition.z+offsetSpawnZ);
+        var chunk =(FoodChunk) InstantiateChunk(foodsTemplates[Random.Range(0, foodsTemplates.Length)]);
         chunk.Spawn(colorInstaller);
+    }
+    private Chunk InstantiateChunk(Chunk chunkTemplate)
+    {
+        var chunk = Instantiate(chunkTemplate,transform);
+        chunk.transform.position = new Vector3(0, 0, _chunks[_chunks.Count - 1].End.position.z - chunk.Start.localPosition.z + offsetSpawnZ);
         _chunks.Add(chunk);
+        return chunk;
     }
 }

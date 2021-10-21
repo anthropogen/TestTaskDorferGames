@@ -13,6 +13,7 @@ public class Follower : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        _transform.position=Vector3.Lerp(_transform.position,target.position-_offset,speed);
+        
+        _transform.position=Vector3.Lerp(_transform.position, new Vector3(0, target.position.y, target.position.z)-_offset,speed);
     }
 }
