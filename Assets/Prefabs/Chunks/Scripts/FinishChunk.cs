@@ -13,7 +13,7 @@ public class FinishChunk : Chunk
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out SneakHead head))
+        if (other.TryGetComponent(out SnakeHead head))
         {
             if (head!=null)
             {

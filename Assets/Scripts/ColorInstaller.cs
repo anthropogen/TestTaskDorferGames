@@ -12,8 +12,10 @@ public class ColorInstaller : MonoBehaviour
         {
             return _prevColor= colors[Random.Range(0, colors.Length)];
         }
-        _prevPreviousColor = _prevColor;
-        return _prevColor = ExcludeColor(_prevColor,_prevPreviousColor);   
+        var temp = _prevColor;
+         _prevColor = ExcludeColor(_prevColor,_prevPreviousColor);   
+        _prevPreviousColor = temp;
+        return _prevColor;
     }
     private Color ExcludeColor(Color first,Color second)
     {

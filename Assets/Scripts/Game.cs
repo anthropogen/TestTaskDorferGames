@@ -8,7 +8,7 @@ public class Game : MonoBehaviour
     [SerializeField] private RectTransform crystalLabel;
     [SerializeField] private RectTransform losePanel;
     [SerializeField] private WinPanel winPanel;
-    [SerializeField] private SneakHead sneakHead;
+    [SerializeField] private SnakeHead sneakHead;
     [SerializeField] private Jaws jaws;
     public event UnityAction StartedGame;
     private void OnEnable()
