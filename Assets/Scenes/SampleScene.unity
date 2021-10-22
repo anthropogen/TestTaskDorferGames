@@ -373,7 +373,7 @@ MonoBehaviour:
   - {fileID: 2624578221997207914, guid: 8e53910ac1ac0a047abfb81c2e590891, type: 3}
   firstChunk: {fileID: 6379233256175172935}
   finishChunk: {fileID: -6407324406506502599, guid: ba4210278d8342943b010cbc8cf3d928, type: 3}
-  road: {fileID: 0}
+  road: {fileID: 257543989}
   levelSize: 10
   offsetSpawnZ: 5
 --- !u!4 &226757125
@@ -962,8 +962,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c46b1b97d4d5d4db85ca15be5b5e1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snake: {fileID: 0}
-  head: {fileID: 1894241088}
+  snake: {fileID: 896133450}
+  head: {fileID: 1894241089}
   needCrystalToFever: 4
 --- !u!1 &703858101
 GameObject:
@@ -1362,7 +1362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e611a85a741ff9c448d98c60edbe7912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Head: {fileID: 1894241088}
+  Head: {fileID: 1894241089}
   Speed: 6
   Springiness: 32
   RangeMoveZoneOnX: {x: -3.3, y: 3.3}
@@ -1379,7 +1379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6a5f49b73d2777478c2888e86e8799d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Head: {fileID: 1894241088}
+  Head: {fileID: 1894241089}
   Speed: 18
   Springiness: 32
   RangeMoveZoneOnX: {x: -3.3, y: 3.3}
@@ -1939,7 +1939,7 @@ MonoBehaviour:
   crystalLabel: {fileID: 1766450702}
   losePanel: {fileID: 112177094}
   winPanel: {fileID: 1129163376}
-  sneakHead: {fileID: 1894241088}
+  sneakHead: {fileID: 1894241089}
   jaws: {fileID: 526887296}
 --- !u!4 &1364999115
 Transform:
@@ -2657,7 +2657,7 @@ GameObject:
   - component: {fileID: 1894241086}
   - component: {fileID: 1894241085}
   - component: {fileID: 1894241084}
-  - component: {fileID: 1894241088}
+  - component: {fileID: 1894241089}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -2758,7 +2758,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1894241082}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1894241088
+--- !u!114 &1894241089
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2767,17 +2767,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1894241082}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e68a1ba2f9c36324088e14bd5a7ef480, type: 3}
+  m_Script: {fileID: 11500000, guid: da6cb545711d0a0449ff8f70ef118674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _renderer: {fileID: 0}
-  _currentColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 0
-  sneak: {fileID: 896133450}
-  _rigidbody: {fileID: 0}
+  snake: {fileID: 896133450}
 --- !u!1 &1948753561
 GameObject:
   m_ObjectHideFlags: 0
